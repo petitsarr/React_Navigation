@@ -64,5 +64,20 @@ vous devez importer le fichier RouteProp from  @react-navigation/native.
 
 
 
-export type DetailsScreenRouteProp = RouteProp<HomeStackNavigatorParamList , "Details">
+export type DetailsScreenRouteProp = RouteProp<HomeStackNavigatorParamList , "Details">  
 
+/*
+//--------Ajout d'un navigateur inférieur---------------- 
+Le navigateur d'onglets inférieur contiendra 
+lécran Home comme premier onglet.
+Le deuxième onglet sera l'écran Feed.
+Le troisième onglet sera l'écran Settings. 
+Vous pouvez spécifier HomeStackNavigatorParamList comme valeur pour la clé Home.
+
+*/
+
+export type BottomTabNavigatorParamList = {
+    Home : HomeStackNavigatorParamList ; 
+    Feed : undefined ;
+    Settings : undefined ; 
+}
