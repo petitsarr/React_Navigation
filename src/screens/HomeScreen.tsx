@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View ,FlatList ,Pressable, ListRenderItem } from 'react-native' 
-import {useNavigation} from "@react-navigation/native"
+import {useNavigation} from "@react-navigation/native"  
+
+import {HomeScreenNavigationProp} from "../navigation/types"
 import React from 'react'
 
 const DATA = [
@@ -38,7 +40,8 @@ const HomeScreen = () => {
 // la prop onPress sur le composant Pressable est utilisé pour 
 //transmettre le name et birthYear  à l'ecran DetailsScreen en tant que paramètres de route .
 
-    const navigation = useNavigation() 
+// Utilisation de HomeScreenNavigationProp pour annoter le hook useNavigation
+    const navigation = useNavigation<HomeScreenNavigationProp>() 
 
     const renderItem : ListRenderItem<{
         id: number;
