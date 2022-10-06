@@ -2,11 +2,18 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'  
 import HomeScreen from '../screens/HomeScreen' ;
 import DetailsScreen from '../screens/DetailsScreen';
-import {createNativeStackNavigator} from "@react-navigation/native-stack" 
+import {createNativeStackNavigator} from "@react-navigation/native-stack"  
+
+//Après avoir créé les mappages, 
+ //vous devez en informer le navigateur de pile
+ //Il est passé comme générique à la fonction createNativeStackNavigator
+import {HomeStackNavigatorParamList} from "./types" 
 
 
-const HomeStack = createNativeStackNavigator() 
+const HomeStack = createNativeStackNavigator<HomeStackNavigatorParamList>() 
 
+//Le navigateur HomeStack attend un type HomeStackNavigatorParamList
+// avec Home ou Details.
 const HomeStackNavigator = () => { 
 
 // Notez que la prop name sur le composant HomeStack.Screen 

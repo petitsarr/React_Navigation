@@ -6,8 +6,10 @@ import HomeStackNavigator from './HomeStack';
 
 const RootNavigator = () =>{
     return(
-        <NavigationContainer>
-            <HomeStackNavigator/>
+        <NavigationContainer> 
+
+            <HomeStackNavigator/> 
+            
         </NavigationContainer>
     )
 }
