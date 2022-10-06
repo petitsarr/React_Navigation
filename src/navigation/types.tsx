@@ -1,4 +1,5 @@
-import {NativeStackNavigationProp} from "@react-navigation/native-stack"
+import {NativeStackNavigationProp} from "@react-navigation/native-stack" 
+import {RouteProp} from "@react-navigation/native"
 /* 
 -------------------Ajout de la vérification de type pour le navigateur de pile------- 
 
@@ -52,5 +53,16 @@ tous les noms de routes du navigateur HomeStackn en tant que possibilités vers 
 
 
 export type HomeScreenNavigationProp = NativeStackNavigationProp<
-HomeStackNavigatorParamList,"Details">  
+HomeStackNavigatorParamList,"Details">   
+
+/*  
+-------------Ajout de vérifications de type pour les paramètres de route------------------ 
+Pour ajouter la vérification de type pour un écran qui reçoit des paramètres de routes,
+(par exemple, dans l'exemple d'application, l'écran Détails reçoit deux paramètres de routes),
+vous devez importer le fichier RouteProp from  @react-navigation/native.
+*/  
+
+
+
+export type DetailsScreenRouteProp = RouteProp<HomeStackNavigatorParamList , "Details">
 
