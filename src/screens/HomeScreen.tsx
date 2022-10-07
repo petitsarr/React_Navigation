@@ -71,7 +71,7 @@ const HomeScreen = () => {
   return (
     <View style= {styles.container}> 
         <Pressable
-              onPress={() => navigation.navigate('Feed')}
+              onPress={() => navigation.navigate("Feed")}
               style={{
                 padding: 8,
                 borderWidth: 1,
